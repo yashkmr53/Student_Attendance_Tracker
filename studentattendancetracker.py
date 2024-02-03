@@ -13,7 +13,7 @@ def sendEmail (to,msg,sub):
     pass
 
 if __name__=="__main__":
-    df=pd.read_excel("studentattendence.xlsx")
+    df=pd.read_excel("studentattendance.xlsx")
     subCode=input("Enter the Subject Code : ").upper().strip()
     absentRoll=input("Enter the roll number of absent students : ").upper().split()
     for i in absentRoll:
@@ -30,5 +30,5 @@ if __name__=="__main__":
                     msg=f"You have exhausted your all leaves in the subject code : {subCode}"
                     sub="Warning"
                     sendEmail(to,msg,sub)
-                df.to_excel("studentattendence.xlsx",index=False)
+                df.to_excel("studentattendance.xlsx",index=False)
                 
